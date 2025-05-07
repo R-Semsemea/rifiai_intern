@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Neo Sans";
+  src: url("./neo-sans-arabic/NeoSansArabic.ttf");
+}
+body {
+  font-family: "Neo Sans";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 600px;
+  padding: 30px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 35px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.container form {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
+}
+
+.input_container {
+  position: relative;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  font-size: 16px;
+  font-family: "Neo Sans";
+  padding: 16px;
+  padding-left: 35px;
+  border-radius: 10px;
+  border: 1px solid #fafafa;
+  background-color: #f2f2f2;
+}
+
+.input_container i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+}
+
+input:focus,
+select:focus {
+  border-color: #1e00b0;
+  outline: none;
+  box-shadow: 0 0 5px #1e00b0;
+}
+
+#submit-btn {
+  background-color: #1e00b0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  max-width: 125px;
+  padding: 16px;
+}
+
+#submit-btn:hover {
+  background-color: #1d00b0ab;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+}
+
+.save i {
+  color: #fff;
+  margin-left: 10px;
+}
+
+/* Media query for width less than 600px */
+@media screen and (max-width: 600px) {
+  input,
+  select,
+  .select2-container .select2-selection--single {
+    font-size: 14px;
+  }
+  body {
+    background-image: url("./vbg.jpg");
+  }
+}
